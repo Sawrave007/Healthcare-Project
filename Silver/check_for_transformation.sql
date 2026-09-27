@@ -8,6 +8,16 @@ select count(DISTINCT("Patient ID")) from  bronze."claims_raw"
 -- claim id, provider id, patiend id are unique 1000 rows
 
 select
+DISTINCT(c."Diagnosis Code"),
+icd."description"
+from bronze."claims_raw" as c
+left join bronze."icd10_raw" as icd 
+on c."Diagnosis Code" = icd."diagnosis_code"
+
+
+
+
+select
 DISTINCT("Insurance Type"),
 count(*)
 from  bronze."claims_raw"
