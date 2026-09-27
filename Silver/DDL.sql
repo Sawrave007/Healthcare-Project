@@ -9,7 +9,7 @@ CREATE TABLE silver.icd10 (
 
 CREATE TABLE silver.icd10_unmatched (
     diagnosis_code   text PRIMARY KEY,
-    claim_count       integer NOT NULL,  -- how many claims use this code
+    claim_count       integer NOT NULL,
     likely_reason      text,
     category            text
 );
@@ -48,4 +48,11 @@ CREATE TABLE silver.claims_exceptions (
     failed_value            text,
     expected_condition      text,
     detected_at              timestamp DEFAULT now()
+);
+
+CREATE TABLE silver.icd10_matched (
+    diagnosis_code   text PRIMARY KEY,
+    description      text NOT NULL,
+    chapter          text,
+    category         text
 );
