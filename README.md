@@ -65,7 +65,7 @@ US billing)
                  └── dim_date
                          │
                          ▼
-              sql/qa, sql/views, sql/kpis
+              sql/qa, sql/views
 ```
 
 No `dim_provider` or `dim_patient` — every provider and patient in this dataset has
@@ -138,12 +138,12 @@ rcm-analytics/
 │   │   ├── qa_claim_status_outcome.sql
 │   │   └── qa_icd10_matching.sql
 │   ├── views/
-│   │   ├── vw_claim_quality.sql
-│   │   ├── vw_claim_financials.sql
-│   │   ├── vw_denial_analysis.sql
-│   │   └── vw_rcm_kpis.sql
-│   └── kpis/
-│       └── rcm_kpi_queries.sql
+│       ├── vw_claim_quality.sql
+│       ├── vw_claim_financials.sql
+│       ├── vw_denial_analysis.sql
+│       └── vw_rcm_kpis.sql
+│   
+│       
 └── docs/
     ├── rcm_kpi_definitions.md
     └── qa_test_plan.md
