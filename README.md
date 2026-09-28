@@ -149,9 +149,3 @@ rcm-analytics/
     └── qa_test_plan.md
 ```
 
-
-
-## Status
-
-Bronze, silver, and gold are built and populated. `rcm_kpi_definitions.md` is drafted.
-Remaining: the QA scripts, views, and KPI queries in `sql/`, and `qa_test_plan.md`.
