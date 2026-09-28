@@ -387,11 +387,11 @@ denial_reason
 
 ```sql
 SELECT
-    denial_reason,
+    reason_code,
     COUNT(DISTINCT claim_id) AS denied_claims
 FROM gold.fact_claims
 WHERE outcome = 'Denied'
-GROUP BY denial_reason
+GROUP BY reason_code
 ORDER BY denied_claims DESC;
 ```
 
